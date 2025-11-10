@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personagens • Desenhos 90/2000</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">🪐</span>
+      <h1>Galeria de Personagens</h1>
+      <small>API: Rick and Morty</small>
+    </div>
+
+    <form id="filters" class="filters" autocomplete="off">
+      <input id="search" name="q" type="search" placeholder="Buscar por nome..." />
+      <select id="status">
+        <option value="">Status (todos)</option>
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </select>
+      <button type="submit">Buscar</button>
+      <button type="button" id="clear">Limpar</button>
+    </form>
+  </header>
+
+  <main class="container">
+    <section id="stats" class="stats card" aria-live="polite"></section>
+
+    <section id="grid" class="grid" aria-live="polite">
+      <!-- Cards serão inseridos via JavaScript -->
+    </section>
+
+    <nav class="pager">
+      <button id="prev" disabled>← Anterior</button>
+      <span id="pageInfo" class="page-info">Página 1</span>
+      <button id="next" disabled>Próxima →</button>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <p>Trabalho acadêmico — HTML, CSS e JavaScript puros. Dados em tempo real de <a href="https://rickandmortyapi.com/" target="_blank" rel="noreferrer">rickandmortyapi.com</a>.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
